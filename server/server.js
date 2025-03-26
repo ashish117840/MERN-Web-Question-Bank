@@ -12,9 +12,7 @@ import cors from 'cors'
 // }));
 //new cors
 app.use(cors({
-    origin: ["http://localhost:3000","https://mern-web-question-bank-frontend.vercel.app"],
-    methods: ["POST", "GET"],
-    credentials: true,
+    origin: ["http://localhost:3000","https://mern-web-question-bank-frontend.vercel.app"]
 }));
 
 connectWithMongoDB();
