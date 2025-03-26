@@ -6,8 +6,15 @@ import PostRoute from './routes/post.route.js'
 import connectWithMongoDB from './db/Connection1.js'
 import cors from 'cors'
 
+//old cors setup
+// app.use(cors({
+//     origin: ["http://localhost:3000","https://full-stack-web-question-bank.netlify.app"]
+// }));
+//new cors
 app.use(cors({
-    origin: ["http://localhost:3000","https://full-stack-web-question-bank.netlify.app"]
+    origin: ["http://localhost:3000","https://mern-web-question-bank-frontend.vercel.app"],
+    methods: ["POST", "GET"],
+    credentials: true,
 }));
 
 connectWithMongoDB();
