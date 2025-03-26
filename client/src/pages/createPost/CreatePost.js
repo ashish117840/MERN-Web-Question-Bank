@@ -9,7 +9,7 @@ const CreatePost = () => {
   const [answer, setAnswer] = useState('');
   const navigate = useNavigate();
   const { postID } = useParams();
-  const url = process.env.REACT_APP_SERVER_URL
+  const url = process.env.REACT_APP_SERVER_URL || "https://mern-web-question-bank.vercel.app/api/v1";
 
   const loadPosts = async () => {
     try {

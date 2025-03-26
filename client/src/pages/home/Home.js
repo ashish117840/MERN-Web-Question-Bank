@@ -5,7 +5,7 @@ import axios from 'axios'
 
 const Home = () => {
   const [posts, setPosts] = useState();
-  const url = process.env.REACT_APP_SERVER_URL
+  const url = process.env.REACT_APP_SERVER_URL || "https://mern-web-question-bank.vercel.app/api/v1";
 
   const loadPosts = async () => {
     try {
